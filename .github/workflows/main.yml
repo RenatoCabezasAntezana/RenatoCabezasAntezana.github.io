@@ -1,0 +1,30 @@
+name: Cypress Tests and Deploy
+
+on: [push]
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check npm version
+        run: npm i
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          parallel: true
+          command: npm run cypress:run
+
+      - name: Generate report
+        run: node report.js
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-report
+          path: report

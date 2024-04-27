@@ -1,0 +1,8 @@
+
+npm run cypress:open
+npm run cypress:run
+npm run test
+npm run cypress:execution-cloud-browser-tags
+
+
+

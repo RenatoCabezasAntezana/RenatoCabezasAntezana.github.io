@@ -1,0 +1,138 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login Inteligenio",
+    "line": 1,
+    "id": "login-inteligenio",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "login-inteligenio;login-successfull",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login Successfull",
+        "tags": [
+          {
+            "name": "@CP001",
+            "line": 3
+          },
+          {
+            "name": "@Automation",
+            "line": 3
+          },
+          {
+            "name": "@Regression",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
+            "result": {
+              "status": "passed",
+              "duration": 13393000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
+            "result": {
+              "status": "passed",
+              "duration": 553000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Yo le doy click en el boton de inicio de sesion",
+            "result": {
+              "status": "passed",
+              "duration": 178000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Yo ingreso a la pagina principal",
+            "result": {
+              "status": "passed",
+              "duration": 2238000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-inteligenio;login-unsuccessfull",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Login UnSuccessfull",
+        "tags": [
+          {
+            "name": "@CP002",
+            "line": 10
+          },
+          {
+            "name": "@Automation",
+            "line": 10
+          },
+          {
+            "name": "@Regression",
+            "line": 10
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
+            "result": {
+              "status": "passed",
+              "duration": 2579000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
+            "result": {
+              "status": "passed",
+              "duration": 746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Yo le doy click en el boton de inicio de sesion",
+            "result": {
+              "status": "passed",
+              "duration": 206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Yo ingreso a la pagina principal",
+            "result": {
+              "status": "passed",
+              "duration": 2115000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "name": "inteligo-automation-testing",
+  "version": "1.0.0",
+  "description": "cypress, javascript, cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "generate-report": "cucumber-html-reporter --json=cypress/results/output.json --report-dir=report",
+    "report:cypress": "node report.js",
+    "test": "cypress run --record --key 5aa40a94-2842-4fe0-aa44-c7b609537a14",
+    "cypress:execution-cloud-browser-tags": "npx cypress run --browser chrome --headless --env tags=@Regression"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Amazing",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.3",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^3.6.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/web/steps/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
