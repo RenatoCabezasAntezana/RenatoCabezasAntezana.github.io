@@ -21,7 +21,7 @@ jobs:
           command: npm run cypress:run
 
       - name: Generate report
-        run: node report.js
+        run: node report.js 
 
       - name: Upload report artifact
         uses: actions/upload-artifact@v3
