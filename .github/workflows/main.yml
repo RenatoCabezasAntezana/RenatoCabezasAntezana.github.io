@@ -29,7 +29,7 @@ jobs:
       - name: Upload report artifact
         uses: actions/upload-artifact@v3
         with:
-          name: cucumber-report
+          name: '${{ steps.deployment.outputs.page_url }}report/index.html'
           path: report
 
   deploy-to-github-pages:
