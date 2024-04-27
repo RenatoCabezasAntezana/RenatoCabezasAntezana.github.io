@@ -3,8 +3,7 @@ name: Cypress Tests Renato
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
-
+    
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
@@ -12,9 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Check npm version
-        run: npm i
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
@@ -32,10 +28,3 @@ jobs:
           name: "cucumber-report"
           path: report
           retention-days: 7
-
-      - name: Get GitHub URL
-        id: github-url
-        run: echo "::set-output name=url::${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/${GITHUB_REF}/report/index.html"
-
-      - name: Display GitHub URL
-        run: echo "The GitHub URL is ${{ steps.github-url.outputs.url }}"
