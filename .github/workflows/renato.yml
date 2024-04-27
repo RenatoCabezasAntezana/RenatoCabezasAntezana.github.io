@@ -29,8 +29,8 @@ jobs:
           record: true
           parallel: true
           command: npm run cypress:run
-      - name: Report 
-        uses: node report.js
+      - name: Report
+        run: node report.js
 
   deploy:
     needs: cypress-tests
