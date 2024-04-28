@@ -30,6 +30,7 @@ jobs:
           parallel: true
           command: npm run cypress:run
       - name: Upload artifact
+        if: ${{ always() }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'report'
