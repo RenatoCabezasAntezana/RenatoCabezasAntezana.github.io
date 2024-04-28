@@ -1,4 +1,4 @@
-Feature:Login Inteligenio
+Feature:Login Inteligenio 02
 
   @CP001 @Automation @Regression
   Scenario: Login Successfull Walter

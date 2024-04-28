@@ -1,17 +1,17 @@
 [
   {
     "keyword": "Feature",
-    "name": "Login Inteligenio",
+    "name": "Login Inteligenio 02",
     "line": 1,
-    "id": "login-inteligenio",
+    "id": "login-inteligenio-02",
     "tags": [],
-    "uri": "login.feature",
+    "uri": "login copy.feature",
     "elements": [
       {
-        "id": "login-inteligenio;login-successfull",
+        "id": "login-inteligenio-02;login-successfull-walter",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Login Successfull",
+        "name": "Login Successfull Walter",
         "tags": [
           {
             "name": "@CP001",
@@ -35,7 +35,7 @@
             "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
             "result": {
               "status": "passed",
-              "duration": 14629000000
+              "duration": 15942000000
             }
           },
           {
@@ -45,7 +45,7 @@
             "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
             "result": {
               "status": "passed",
-              "duration": 585000000
+              "duration": 755000000
             }
           },
           {
@@ -55,7 +55,7 @@
             "name": "Yo le doy click en el boton de inicio de sesion",
             "result": {
               "status": "passed",
-              "duration": 191000000
+              "duration": 224000000
             }
           },
           {
@@ -65,16 +65,16 @@
             "name": "Yo ingreso a la pagina principal",
             "result": {
               "status": "passed",
-              "duration": 1407000000
+              "duration": 2074000000
             }
           }
         ]
       },
       {
-        "id": "login-inteligenio;login-unsuccessfull",
+        "id": "login-inteligenio-02;login-unsuccessfull-renato",
         "keyword": "Scenario",
         "line": 11,
-        "name": "Login UnSuccessfull",
+        "name": "Login UnSuccessfull Renato",
         "tags": [
           {
             "name": "@CP002",
@@ -98,7 +98,7 @@
             "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
             "result": {
               "status": "passed",
-              "duration": 3095000000
+              "duration": 3163000000
             }
           },
           {
@@ -108,7 +108,7 @@
             "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
             "result": {
               "status": "passed",
-              "duration": 554000000
+              "duration": 631000000
             }
           },
           {
@@ -118,7 +118,7 @@
             "name": "Yo le doy click en el boton de inicio de sesion",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 195000000
             }
           },
           {
@@ -128,7 +128,7 @@
             "name": "Yo ingreso a la pagina principal",
             "result": {
               "status": "passed",
-              "duration": 1526000000
+              "duration": 1422000000
             }
           }
         ]
