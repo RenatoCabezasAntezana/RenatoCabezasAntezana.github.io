@@ -36,13 +36,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: ${{ always() }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # ajusta la versión según tus necesidades
+          node-version: '16'
       - name: Install dependencies
         run: npm install multiple-cucumber-html-reporter
       
@@ -51,7 +52,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: "report"
       - name: Deploy to GitHub Pages
         id: deployment
