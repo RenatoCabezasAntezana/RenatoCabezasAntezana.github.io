@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # ajusta la versión según tus necesidades
+          node-version: '16' # ajusta la versión según tus necesidades
       - name: Install dependencies
         run: npm install multiple-cucumber-html-reporter
       - name: Report
