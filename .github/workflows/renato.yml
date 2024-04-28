@@ -13,8 +13,8 @@ permissions:
   id-token: write
 
 concurrency:
-    group: "pages"
-    cancel-in-progress: false
+  group: "pages"
+  cancel-in-progress: false
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
@@ -32,8 +32,19 @@ jobs:
       - name: Report
         run: node report.js
 
-  deploy:
+  report-cucumber:
     needs: cypress-tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Report
+        run: node report.js
+
+  deploy:
+    needs: report-cucumber
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,7 +58,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'report'
+          path: "report"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
