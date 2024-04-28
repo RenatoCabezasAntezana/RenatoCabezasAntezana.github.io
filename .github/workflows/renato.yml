@@ -34,24 +34,29 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
-      - name: Commit and push changes
-        uses: actions/github-script@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          script: |
-            const github = require('@actions/github');
-            const context = github.context;
-            const { execSync } = require('child_process');
-              try {
-              execSync('git config --global user.email "renato.sistemas02@gmail.com"');
-              execSync('git config --global user.name "Renato Cabezas Antezana"');
-              execSync('git add .');
-              execSync('git commit -m "Update index.html"');
-              execSync('git push origin main');
-              console.log('Changes committed and pushed successfully.');
-            } catch (error) {
-             console.error('Error committing and pushing changes:', error);
-             process.exit(1);
-             }
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm install multiple-cucumber-html-reporter
+
+      - name: Report
+        run: node report.js
+
+      - name: Commit changes
+        run: |
+          git config --global user.email "renato.sistemas02@gmail.com"
+          git config --global user.name "Renato Cabezas Antezana"
+          git config --global user.email
+          git config --global user.name
+          git add .
+          git commit -m "Update index.html"
+          git push origin main
 
   deploy:
     needs: generate-report
