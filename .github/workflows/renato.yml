@@ -48,31 +48,13 @@ jobs:
       - name: Report
         run: node report.js
 
-      - name: Check for changes
-        id: check_changes
-        run: |
-          if git diff --quiet index.html; then
-            echo "No changes detected in index.html"
-            exit 0
-          else
-            echo "Changes detected in index.html"
-            exit 1
-          fi
-      
       - name: Commit changes
-        if: steps.check_changes.outcome == 'failure'
         run: |
           git config --global user.email "renato.sistemas@gmail.com"
           git config --global user.name "RenatoCabezasAntezana"
           git add .
           git commit -m "Update index.html"
-      
-      - name: Push changes
-        if: steps.check_changes.outcome == 'failure'
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      
+          git push origin main
 
   deploy:
     needs: generate-report
