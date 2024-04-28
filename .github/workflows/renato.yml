@@ -38,10 +38,12 @@ jobs:
 
     steps:
       - name: Node install
-        run: npm i
+        uses: actions/checkout@v4
+        with:
+          command: npm i
 
       - name: Report
-        run: node report.js
+        run: node report.js # Remove the comma here
 
   deploy:
     needs: report-cucumber
