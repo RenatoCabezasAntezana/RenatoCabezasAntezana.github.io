@@ -35,7 +35,7 @@
             "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
             "result": {
               "status": "passed",
-              "duration": 14629000000
+              "duration": 13301000000
             }
           },
           {
@@ -45,7 +45,7 @@
             "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
             "result": {
               "status": "passed",
-              "duration": 585000000
+              "duration": 538000000
             }
           },
           {
@@ -55,7 +55,7 @@
             "name": "Yo le doy click en el boton de inicio de sesion",
             "result": {
               "status": "passed",
-              "duration": 191000000
+              "duration": 192000000
             }
           },
           {
@@ -65,7 +65,7 @@
             "name": "Yo ingreso a la pagina principal",
             "result": {
               "status": "passed",
-              "duration": 1407000000
+              "duration": 1568000000
             }
           }
         ]
@@ -98,7 +98,7 @@
             "name": "Yo ingreso a la aplicacion Inteligenio \"qa\"",
             "result": {
               "status": "passed",
-              "duration": 3095000000
+              "duration": 2424000000
             }
           },
           {
@@ -108,7 +108,7 @@
             "name": "Yo digito mi usuario \"mdac\" y contraseña \"123456\"",
             "result": {
               "status": "passed",
-              "duration": 554000000
+              "duration": 587000000
             }
           },
           {
@@ -118,7 +118,7 @@
             "name": "Yo le doy click en el boton de inicio de sesion",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 243000000
             }
           },
           {
@@ -128,7 +128,7 @@
             "name": "Yo ingreso a la pagina principal",
             "result": {
               "status": "passed",
-              "duration": 1526000000
+              "duration": 836000000
             }
           }
         ]
