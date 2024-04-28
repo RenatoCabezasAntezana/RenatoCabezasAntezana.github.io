@@ -29,9 +29,6 @@ jobs:
           record: true
           parallel: true
           command: npm run cypress:run
-      - name: Report
-        run: node report.js
-
  
   deploy:
     needs: cypress-tests
@@ -40,10 +37,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Report
-        run: node report.js
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Report
+        run: node report.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
