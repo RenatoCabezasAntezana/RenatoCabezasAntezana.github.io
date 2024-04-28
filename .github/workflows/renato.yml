@@ -29,51 +29,7 @@ jobs:
           record: true
           parallel: true
           command: npm run cypress:run
-  generate-report:
-    needs: cypress-tests
-    runs-on: ubuntu-latest
-    if: ${{ always() }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "16"
-
-      - name: Install dependencies
-        run: npm install multiple-cucumber-html-reporter
-
-      - name: Report
-        run: node report.js
-
-      - name: Commit changes
-        run: |
-          git config --global user.email "renato.sistemas02@gmail.com"
-          git config --global user.name "Renato Cabezas Antezana"
-          git config --global user.email
-          git config --global user.name
-          git add .
-          git commit -m "Update index.html"
-          git push origin main
-
-  deploy:
-    needs: generate-report
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    if: ${{ always() }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "report"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          path: 'report'
