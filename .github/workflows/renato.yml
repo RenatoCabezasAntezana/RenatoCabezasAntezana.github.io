@@ -47,7 +47,12 @@ jobs:
 
       - name: Report
         run: node report.js
-
+      
+      - name: Verify Git configuration
+        run: |
+          git config --global user.email
+          git config --global user.name
+      
       - name: Commit changes
         run: |
           git config --global user.email "renato.sistemas02@gmail.com"
